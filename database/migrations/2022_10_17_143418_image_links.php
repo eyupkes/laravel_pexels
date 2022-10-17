@@ -17,14 +17,14 @@ class ImageLinks extends Migration
             $table->id();
             $table->integer('photographer_id');
             $table->integer('photos_id'); 
-            $table->integer('original');
-            $table->integer('large2x');
-            $table->integer('large');
-            $table->integer('medium');
-            $table->integer('small');
-            $table->integer('portrait');
-            $table->integer('landscape');
-            $table->integer('tiny'); 
+            $table->string('original');
+            $table->string('large2x');
+            $table->string('large');
+            $table->string('medium');
+            $table->string('small');
+            $table->string('portrait');
+            $table->string('landscape');
+            $table->string('tiny'); 
             $table->timestamps();
         });
     }
