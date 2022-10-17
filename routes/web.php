@@ -15,6 +15,9 @@ use App\Http\Controllers\PhotosController;
 */
 
 Route::get('/', [PhotosController::class, 'index']);
+Route::get('/photos/{id}', [PhotosController::class, 'PhotographerPhotoList'])->name('id');
+ 
+
 
 Route::get('/welcome', function () {
     return view('welcome');

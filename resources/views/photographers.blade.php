@@ -7,32 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
-      <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">{{$profile->name}}</h1> 
-        <p>
-          <a href="{{ url('') }} " class="btn btn-primary  btn-sm">< Back</a>
-        <a target="_blank" href="{{ $profile->profile_url}} " class="btn btn-primary  btn-sm">Pexels Profile</a>
-           
-        </p>
-      </div>
-    </div>
-  </section>
  <div class="container text-center">
-
   <div class="row">
-        @foreach($photos as $key => $value) 
+        @foreach($photographers as $key => $value) 
         
- <div class="card" style="width: 18rem;"> 
- <img src="{{ $value->Image_links[0]->small}}" class="card-img-top" alt="{{ $value->alt}}"> 
+ <div class="card" style="width: 18rem;">
+ 
   <div class="card-body">
-    <h5 class="card-title">{{ $value->alt}}</h5> 
+    <h5 class="card-title">{{  $value->name}}</h5> 
     <a target="_blank" href="{{ $value->profile_url}} " class="btn btn-primary  btn-sm">Pexels Profile</a>
     <a href="{{ url('photos/'.$value->id)}} " class="btn btn-secondary  btn-sm">Show photos</a>
   </div>
-</div> 
-    @endforeach 
+</div>
+
+    @endforeach
+
+ 
   </div>
 </div>
 
